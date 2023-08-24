@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.navigation.fragments.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/navigate_to_login"
+            app:destination="@id/login"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.navigation.fragments.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_bottomFragment"
+            app:destination="@id/bottomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.navigation.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/bottomFragment"
+        android:name="com.example.navigation.fragments.BottomFragment"
+        android:label="fragment_bottom"
+        tools:layout="@layout/fragment_bottom" >
+        <action
+            android:id="@+id/action_bottomFragment_to_login"
+            app:destination="@id/login"
+            app:popUpTo="@id/login" />
+    </fragment>
+
+</navigation>

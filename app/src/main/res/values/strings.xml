@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Navigation</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+
+    <string name="log_in">Log In</string>
+    <string name="welcome">Welcome</string>
+    <string name="one_time_work">One Time Work</string>
+    <string name="periodic_work">Periodic Work\n</string>
+
+
+    <string name= "email">Email</string>
+
+
+</resources>
